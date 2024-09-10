@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Odin-Library</title>
+</head>
+<body>
+  <button class="displayButton">Display Library</button>
+  <button id="showDialog">Add Book</button>
+
+  <!-- A modal dialog containing a form -->
+  <dialog id="addBookDialog">
+    <form>
+      <label for="authorInput">Author: </label>
+      <input id="authorInput" type="text">
+
+      <label for="titleInput">Book Title: </label>
+      <input id="titleInput" type="text">
+
+      <label for="numPagesInput"># of Pages: </label>
+      <input id="numPagesInput" type="number" min="0">
+      
+      <label for="readInput">Already read?</label>
+      <select id="readInput">
+        <option>true</option>
+        <option>false</option>
+      </select>
+
+      <div>
+        <button value="cancel" formmethod="dialog">Cancel</button>
+        <button id="confirmBtn" value="default">Confirm</button>
+      </div>
+    </form>
+  </dialog>
+  
+  <h2>My Library</h2>
+  <div class="libraryContainer">
+  </div>
+</body>
+<script src="library.js"></script>
+</html>
